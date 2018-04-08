@@ -17,6 +17,7 @@
             android:layout_marginLeft="20dp"
             />
     <TextView
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -31,6 +32,7 @@
         android:gravity="center"
         />
     <TextView
+        android:id="@+id/carrera"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Estudiante de Ingeniería Informática"
@@ -76,6 +78,7 @@
         android:layout_marginLeft="10dp"
     />
     <TextView
+        android:id="@+id/github"
         android:layout_width="wrap_content"
         android:layout_marginTop="-30dp"
         android:fontFamily="sans-serif-condensed"
@@ -94,6 +97,7 @@
         android:layout_marginLeft="10dp"
     />
     <TextView
+        android:id="@+id/correo"
         android:layout_width="wrap_content"
         android:layout_marginTop="-23dp"
         android:layout_marginLeft="0dp"
@@ -119,6 +123,7 @@
                     android:layout_marginLeft="20dp"
                     />
                 <TextView
+                    android:id="@+id/telefono"
                     android:layout_width="wrap_content"
                     android:layout_marginTop="-30dp"
                     android:layout_marginLeft="0dp"
@@ -138,6 +143,7 @@
                     android:layout_marginLeft="20dp"
                     />
                 <TextView
+                    android:id="@+id/twitter"
                     android:layout_width="wrap_content"
                     android:layout_marginTop="-30dp"
                     android:layout_marginLeft="0dp"
