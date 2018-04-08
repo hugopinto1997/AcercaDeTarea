@@ -17,10 +17,10 @@ import java.io.File;
 import java.io.FileOutputStream;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView guardarview;
-    Button btn;
+    private ImageView guardarview;
+    private Button btn;
     private TextView a,b,c,d,x,f;
-
+    private Bitmap bitmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         return Retorno;
     }
     public void Share(View view){
-        Bitmap bitmap=jalarbitmapdelview(guardarview);
+        bitmap=jalarbitmapdelview(guardarview);
         try {
             File file = new File(this.getExternalCacheDir(),"logicchip.png");
             FileOutputStream fOut = new FileOutputStream(file);
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             fOut.flush();
             fOut.close();
             file.setReadable(true, false);
-            final Intent intent = new Intent(android.content.Intent.ACTION_SEND);
+            final Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
             intent.putExtra(Intent.EXTRA_TEXT, "Acerca de mi\nNombre: "+a.getText().toString()+"\nCarrera: "+b.getText().toString()
